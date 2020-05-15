@@ -1,0 +1,65 @@
+@import './shared/config';
+
+*{
+    margin: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+.app{
+    padding-top:3em;
+    height: 100vh;
+   // overflow: hidden;
+    text-align: center;
+    h1{
+       font-family: 'Cinzel Decorative', cursive;
+       padding-right: 4px;
+    }
+    label{
+        font-family: 'Titillium Web', sans-serif;
+    }
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dmode{
+    background-color: $primaryColorD;
+    color:$primaryColorL;
+}
+
+.option-div{
+    background-color:tomato;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0 5px 0;
+}
+
+.app-gallery{
+    padding-top:20px;
+   // background-color: pink;
+}
+
+
+.fa-moon{
+
+    :hover{
+        transform: scale(1.2);
+        transition: all .5s ease-in-out;
+    }
+}
+
+.copywright{
+    position: absolute;
+    bottom:1em;
+    right:1.5em;
+    opacity:.4;
+
+    .name{
+        font-family: 'Arizonia', cursive;
+    }
+}

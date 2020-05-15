@@ -1,0 +1,125 @@
+@import '../../../../shared/config';
+
+@mixin ease{
+    transition: all .2s ease-in-out;
+}
+
+
+#dp-01{
+    grid-area: p-01;  
+    height: 100%;
+    width: 100%; 
+}
+#dp-02{ 
+    grid-area: p-02;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-03{
+    grid-area: p-03;
+    height: 100%;
+    width: 100%;  
+    //display: none;  
+}
+#dp-04{
+    grid-area: p-04;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-05{
+    grid-area: p-05;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-06{
+    grid-area: p-06;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-07{
+    grid-area: p-07;
+    height: 100%;
+    width: 100%; 
+    //display: none;   
+   }
+#dp-08{
+    grid-area: p-08;
+    height: 100%;
+    width: 100%;    
+    //display: none;
+   }
+#dp-09{
+    grid-area: p-09;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-10{
+    grid-area: p-10;
+    height: 100%;
+    width: 100%;    
+   }
+#dp-11{
+    grid-area: p-11;
+    height: 100%;
+    width: 100%;    
+   }      
+#dp-12{
+    grid-area: p-12; 
+    height: 100%;
+    width: 100%; 
+}
+
+.gallery-in-borders{
+    display:grid;
+    grid-template-columns: repeat(4,150px);
+    grid-template-rows: repeat(4, 150px);
+    grid-template-areas: 
+        "p-12 p-01 p-06 p-06  "
+        "p-02 p-04 p-06 p-06"
+        "p-03 p-07 p-08  p-08"
+        "p-09 p-09 p-11 p-05"
+    ;
+    justify-content: center;
+    gap:4px;
+    margin: 0 10vh 0 10vh;
+}
+
+.gallery-ragged-borders{
+    display:grid;
+    grid-template-columns: 50px 150px 150px 150px 150px  50px;
+    grid-template-rows: 50px 150px 150px 150px 150px 50px;
+    grid-template-areas:
+        "p-12 p-12 . . . ." 
+        "p-12 p-12 p-01 p-06 p-06 ."
+        "p-02 p-02 p-04 p-06 p-06 ."
+        ". p-03 p-07 p-08  p-08 p-08"
+        "p-09 p-09 p-09 p-11 p-05 ."
+        "p-09 p-09 p-09 . . ."
+    ;
+    justify-content: center;
+    gap:4px;
+    margin: 0 10vh 0 10vh;
+}
+
+.image-wrapper{
+      display:flex;
+      justify-content: center;
+    //  align-items: center;
+     overflow: hidden;
+    //width: 150px;
+    //height: 150px;
+    //border: 2px violet solid;
+    
+}
+
+.draggable{
+    width: 100%;
+    &:hover{
+        transform: scale(1.1);
+        @include ease();
+    }
+}
+
+
+
+@import './mobile';
